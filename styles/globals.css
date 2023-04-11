@@ -57,6 +57,9 @@
       #ec0dff 109.71%
     );
   }
+  .box-shad {
+    box-shadow: 0px 0px 8px rgba(135, 135, 135, 0.25);
+  }
 
   /* width */
   .scrolly::-webkit-scrollbar {

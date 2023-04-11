@@ -5,7 +5,7 @@ import Head from "next/head";
 
 const login = () => {
   return (
-    <section className="relative w-full h-[100vh] flex justify-between overflow-hidden">
+    <section className="relative w-full h-[100vh] flex justify-between overflow-hidden bg-white">
       <Head>
         <title>Login</title>
         <meta name="description" content="Login Page" />
