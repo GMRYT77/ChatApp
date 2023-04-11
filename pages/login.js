@@ -1,10 +1,16 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Head from "next/head";
 
 const login = () => {
   return (
     <section className="relative w-full h-[100vh] flex justify-between overflow-hidden">
+      <Head>
+        <title>Login</title>
+        <meta name="description" content="Login Page" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <div className="w-[100%] h-full relative hidden md:block">
         <div className="relative w-[100%] h-[100%] ">
           <Image
@@ -12,6 +18,8 @@ const login = () => {
             layout="fill"
             objectFit="cover"
             className=""
+            alt="img"
+            priority
           />
           <p className="absolute w-full h-full outfit font-bold tracking-wide flex justify-center items-center text-white xl:text-[300%] lg:text-[240%] md:text-[180%] text-center px-3">
             Welcome to ChatApp
@@ -47,7 +55,7 @@ const login = () => {
             type="button"
             id=""
             name=""
-            className="w-full h-full linear-p text-[130%] text-white font-semibold sarabun tracking-wider rounded-[10px] px-4 py-[10px] outline-none"
+            className="w-full h-full linear-p text-[130%] cursor-pointer text-white font-semibold sarabun tracking-wider rounded-[10px] px-4 py-[10px] outline-none"
             value="Login"
           />
           <Link
@@ -56,7 +64,10 @@ const login = () => {
           >
             Forgot Password?
           </Link>
-          <div className="flex gap-3 w-full px-4 py-3  items-center outfit bg-clip bg-gradient-to-r from-neutral-300 to-neutral-200 text-[110%] rounded-[14px] font-semibold text-[#333]/80">
+          <Link
+            href="/"
+            className="flex gap-3 w-full px-4 py-3  items-center outfit bg-clip bg-gradient-to-r from-neutral-300 to-neutral-200 text-[110%] rounded-[14px] font-semibold text-[#333]/80"
+          >
             <div className="relative w-[26px] h-[26px]">
               <Image
                 src="/google-icon.svg"
@@ -66,8 +77,8 @@ const login = () => {
               />
             </div>
             Sign in with Google
-          </div>
-          <div className="flex gap-3 w-full px-4 py-3  items-center outfit bg-clip bg-gradient-to-r from-blue-700 to-blue-500 text-[110%] rounded-[14px] font-semibold text-[#fff]/80">
+          </Link>
+          <div className="flex gap-3 w-full px-4 py-3 cursor-not-allowed items-center outfit bg-clip bg-gradient-to-r from-blue-700 to-blue-500 text-[110%] rounded-[14px] font-semibold text-[#fff]/80">
             <div className="relative w-[14px] h-[26px]">
               <Image
                 src="/facebook-icon.svg"
