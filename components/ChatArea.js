@@ -4,8 +4,8 @@ import React, { useEffect } from "react";
 const ChatArea = () => {
   useEffect(() => {});
   return (
-    <section className="w-[73%] flex text-[1rem]">
-      <div className="w-[100%] flex flex-col ">
+    <section className="relative w-[73%] flex text-[1rem]">
+      <div className="relative w-[100%] flex flex-col justify-between max-h-[100vh]">
         <div className="w-full bg-white px-3 py-2 flex justify-between max-h-[50px] drop-shadow">
           <div className="relative flex gap-2 items-center w-full">
             <div className="relative h-[94%] aspect-square rounded-full overflow-hidden">
@@ -62,8 +62,17 @@ const ChatArea = () => {
           </div>
         </div>
 
-        <div className="h-full w-full "></div>
-        <div className="relative min-h-[56px] h-fit w-full bg-[#c2c2c2]/40 flex justify-between px-3 gap-2 py-2 ">
+        <div className="h-full mb- w-full overflow-y-auto  scrolly-d ">
+          <div className="p-10 my-8">jfnkkfnk</div>
+          <div className="p-10 my-8">jfnkkfnk</div>
+          <div className="p-10 my-8">jfnkkfnk</div>
+          <div className="p-10 my-8">jfnkkfnk</div>
+          <div className="p-10 my-8">jfnkkfnk</div>
+          <div className="p-10 my-8">jfnkkfnk</div>
+          <div className="p-10 my-8">jfnkkfnk</div>1
+        </div>
+
+        <div className="relative  min-h-[56px] h-fit w-full bg-[#c2c2c2]/40 flex justify-between px-3 gap-2 py-2 ">
           {/* <textarea
             rows={1}
             cols={1}

@@ -93,11 +93,11 @@
   }
   /* width */
   .scrolly-d::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
   }
   /* Track */
   .scrolly-d::-webkit-scrollbar-track {
-    background: #222020;
+    background: transparent;
   }
   /* Handle */
   .scrolly-d::-webkit-scrollbar-thumb {
