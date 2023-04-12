@@ -6,8 +6,8 @@ import { MdDarkMode } from "react-icons/md";
 
 const Sidebar = () => {
   return (
-    <section className="relative w-[7%] h-[100vh] flex flex-col">
-      <div className="relative flex flex-col gap-[3%] py-3  h-full items-center px-[10%]">
+    <section className="relative w-[7%] h-[100vh] lg:flex flex-col hidden justify-between">
+      <div className="relative flex flex-col gap-[.7em] py-3  h-[500px] items-center px-[10%]">
         <div className="relative w-[80%] aspect-square">
           <Image
             src="/favicon.svg"

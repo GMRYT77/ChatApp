@@ -1,3 +1,4 @@
+import ChatArea from "@/components/ChatArea";
 import Menubar from "@/components/Menubar";
 import Sidebar from "@/components/Sidebar";
 import Head from "next/head";
@@ -19,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="hidden sm:flex overflow-hidden">
+      <main className="hidden sm:flex overflow-x-auto min-w-[700px] overflow-y-hidden scrolly max-w-[1440px] mx-auto">
         <Head>
           <title>ChatApp | Home</title>
           <meta name="description" content="ChatApp Bolte" />
@@ -29,8 +30,7 @@ export default function Home() {
 
         <Sidebar />
         <Menubar />
-        <div className="">Chat</div>
-        <div className="">Info</div>
+        <ChatArea />
       </main>
       <Link
         href="/login"
