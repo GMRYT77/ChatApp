@@ -37,7 +37,7 @@ const Infobar = (props) => {
   return (
     <div
       id="INFO_BAR"
-      className="relative w-[40%] bg-[#f9f9f9] max-h-[100vh] overflow-y-auto scrolly flex flex-col lg:text-[1rem] md:text-[.8rem] text-[.7rem] max-w-[340px] gap-2"
+      className="relative w-[40%] bg-[#f9f9f9] max-h-[100vh] overflow-y-auto scrolly flex flex-col lg:text-[1rem] md:text-[.8rem] text-[.7rem] max-w-[340px] gap-2 hidden"
     >
       <div className="sticky top-0 w-full flex justify-between lg:min-h-[50px] min-h-[40px] drop-shadow bg-white items-center px-3 outfit font-semibold text-[#333]/80 tracking-wider z-30">
         <h3 className="text-[95%]">{props.title}</h3>

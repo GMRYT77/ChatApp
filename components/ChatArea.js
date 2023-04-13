@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import Infobar from "./Infobar";
+import { lazy } from "react";
+const Infobar = lazy(() => import("./Infobar"));
 
 const ChatArea = () => {
   const [chatHistoryIsPresent, setChatHistoryPresent] = useState(null);
