@@ -2,6 +2,7 @@ import ChatArea from "@/components/ChatArea";
 import Menubar from "@/components/Menubar";
 import Sidebar from "@/components/Sidebar";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
@@ -18,9 +19,21 @@ export default function Home() {
     }
   }, [user, loading]);
 
+  const hideProfilePic = () => {
+    const dpBg = document.getElementById("DP_BG");
+    const dp = document.getElementById("DP_ID");
+    dpBg.classList.add("hidden");
+    dp.classList.add("hidden");
+  };
   return (
-    <>
-      <main className="hidden sm:flex overflow-x-auto min-w-[700px] overflow-y-hidden scrolly max-w-[1440px] mx-auto">
+    <section>
+      <section
+        id="DP_BG"
+        onClick={hideProfilePic}
+        className="fixed w-[100vw] h-[100vh] bg-[#828282]/50 z-[100] backdrop-blur-lg hidden cursor-pointer"
+      ></section>
+
+      <main className="hidden sm:flex overflow-x-auto min-w-[800px] overflow-y-hidden scrolly max-w-[1440px] mx-auto">
         <Head>
           <title>ChatApp | Home</title>
           <meta name="description" content="ChatApp Bolte" />
@@ -38,6 +51,6 @@ export default function Home() {
       >
         Sorry But Mobile Preview Is not Available now
       </Link>
-    </>
+    </section>
   );
 }

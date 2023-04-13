@@ -75,6 +75,7 @@
       background: red;
     }
   }
+
   /* width */
   .scrolly::-webkit-scrollbar {
     width: 4px;
