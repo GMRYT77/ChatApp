@@ -4,7 +4,7 @@ import React from "react";
 
 import { MdDarkMode } from "react-icons/md";
 
-const Sidebar = () => {
+const Sidebar = (props) => {
   return (
     <section className="relative w-[7%] h-[100vh] lg:flex flex-col hidden justify-between">
       <div className="relative flex flex-col gap-[.7em] py-3  h-[500px] items-center px-[10%]">
@@ -45,11 +45,14 @@ const Sidebar = () => {
           <MdDarkMode />
         </div>
         <Link
-          href="/"
+          href="/login"
           className="relative w-[60%] aspect-square rounded-full overflow-hidden"
         >
-          <Image src="/steve.png" layout="fill" objectFit="cover" alt="" />
+          <Image src={props.photoUrl} layout="fill" objectFit="cover" alt="" />
         </Link>
+        <div className="w-[300%] bg-white min-h-[300px] z-[5000] absolute bottom-5 left-[90%] drop-shadow-lg flex flex-col gap-2">
+          <button onClick={props.so}>Log Out</button>
+        </div>
       </div>
     </section>
   );

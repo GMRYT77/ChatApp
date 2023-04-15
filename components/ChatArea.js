@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { lazy } from "react";
 const Infobar = lazy(() => import("./Infobar"));
 
-const ChatArea = () => {
+const ChatArea = (props) => {
   const [chatHistoryIsPresent, setChatHistoryPresent] = useState(null);
 
   const showRightMenu = () => {
@@ -37,14 +37,14 @@ const ChatArea = () => {
                 className="relative h-[94%] aspect-square rounded-full overflow-hidden cursor-pointer"
               >
                 <Image
-                  src="/steve.png"
+                  src={props.photoUrl}
                   layout="fill"
                   objectFit="cover"
                   alt=""
                 />
               </div>
               <div className="flex flex-col  roboto">
-                <span className="text-[110%] -mb-1">Steve Jobs</span>
+                <span className="text-[110%] -mb-1">{props.name}</span>
                 <div className="flex gap-2 w-fit">
                   <div className="w-[10px] h-[10px] rounded-full bg-green-500 m-auto"></div>
                   <span className="sarabun text-[85%] text-neutral-500/80 ">

@@ -1,9 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
-const login = () => {
+const login = (props) => {
+  const useUser = () => ({ userr: props.user, loading: false });
+  const { userr, loading } = useUser();
+  const router = useRouter();
+
+  useEffect(() => {
+    if (userr != null || loading) {
+      router.push("/");
+    } else if (!(userr || loading)) {
+      return;
+    }
+  }, [userr, loading]);
+
   return (
     <section className="relative w-full h-[100vh] flex justify-between overflow-hidden bg-white">
       <Head>
@@ -65,6 +78,7 @@ const login = () => {
             Forgot Password?
           </Link>
           <Link
+            onClick={props.signIn}
             href="/"
             className="flex gap-3 w-full px-4 py-3  items-center outfit bg-clip bg-gradient-to-r from-neutral-300 to-neutral-200 text-[110%] rounded-[14px] font-semibold text-[#333]/80"
           >
