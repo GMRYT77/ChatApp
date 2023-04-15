@@ -94,7 +94,7 @@ const login = () => {
             New User
           </h1>
           <Link
-            href="/"
+            href="/signup"
             className="w-full h-fit p-[3px] linear-p rounded-[14px] -mt-2"
           >
             <div className="text-center w-full h-full   bg-white font-semibold outfit tracking-wider rounded-[11px] px-4 py-[10px] ">

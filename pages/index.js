@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import { Suspense } from "react";
 import Image from "next/image";
 
-const useUser = () => ({ user: "null", loading: false });
+const useUser = () => ({ user: null, loading: false });
 
 export default function Home() {
   const { user, loading } = useUser();
