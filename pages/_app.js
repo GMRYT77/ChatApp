@@ -5,12 +5,12 @@ import { useEffect, useState } from "react";
 
 // Firebase config
 const firebaseConfig = {
-  apiKey: "AIzaSyBZlgcVWwaZdBCWmJXivueQPp2Su9Bdtt0",
-  authDomain: "chatapp-dev-104df.firebaseapp.com",
-  projectId: "chatapp-dev-104df",
-  storageBucket: "chatapp-dev-104df.appspot.com",
-  messagingSenderId: "292487483593",
-  appId: "1:292487483593:web:8ace3f298a8acde21c7d18",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET_ID,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
 // Initialize firebase and google provider
