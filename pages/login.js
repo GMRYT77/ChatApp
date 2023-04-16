@@ -5,16 +5,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const login = (props) => {
-  // const useUser = () => ({ userr: props.user, loading: false });
-  // const { userr, loading } = useUser();
   const router = useRouter();
-  // const useUserr =
-
   useEffect(() => {
     if (props.user) {
       router.push("/");
-    } else if (!props.user) {
-      return;
     }
   }, [props.user, router]);
 
