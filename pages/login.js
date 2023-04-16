@@ -5,17 +5,18 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const login = (props) => {
-  const useUser = () => ({ userr: props.user, loading: false });
-  const { userr, loading } = useUser();
+  // const useUser = () => ({ userr: props.user, loading: false });
+  // const { userr, loading } = useUser();
   const router = useRouter();
+  // const useUserr =
 
   useEffect(() => {
-    if (userr != null || loading) {
+    if (props.user) {
       router.push("/");
-    } else if (!(userr || loading)) {
+    } else if (!props.user) {
       return;
     }
-  }, [userr, loading, router]);
+  }, [props.user, router]);
 
   return (
     <section className="relative w-full h-[100vh] flex justify-between overflow-hidden bg-white">
