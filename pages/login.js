@@ -5,12 +5,12 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const login = (props) => {
-  const router = useRouter();
-  useEffect(() => {
-    if (props.user) {
-      router.push("/");
-    }
-  }, [props.user, router]);
+  // const router = useRouter();
+  // useEffect(() => {
+  //   if (props.user) {
+  //     router.push("/");
+  //   }
+  // }, [props.user, router]);
 
   return (
     <section className="relative w-full h-[100vh] flex justify-between overflow-hidden bg-white">
