@@ -427,6 +427,13 @@
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: "Steelfish";
+    src: url("../styles/fonts/steelfish/steelfish bd.otf");
+  }
+  .steelfish {
+    font-family: "Steelfish", sans-serif;
+  }
   .playball {
     font-family: "Playball", sans-serif;
   }

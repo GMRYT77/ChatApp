@@ -8,8 +8,16 @@ const ChatArea = (props) => {
 
   const showRightMenu = () => {
     const info = document.getElementById("INFO_BAR");
-
-    info.classList.toggle("hidden");
+    const info2 = document.getElementById("INFO_BAR_PROFILE");
+    const info1 = document.getElementById("INFO_BAR_PEOPLE");
+    if (info.classList.contains("hidden")) {
+      info.classList.toggle("hidden");
+      info1.classList.remove("hidden");
+      info2.classList.add("hidden");
+    } else if (!info2.classList.contains("hidden")) {
+      info1.classList.remove("hidden");
+      info2.classList.add("hidden");
+    }
   };
   const showSearchBar = () => {
     const search = document.getElementById("SEARCH_BAR_ID");
@@ -156,7 +164,7 @@ const ChatArea = (props) => {
           </div>
         </div>
 
-        <Infobar title="Contact Info" />
+        <Infobar title="Contact Info" user={props.user} so={props.so} />
       </section>
 
       <div

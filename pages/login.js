@@ -15,7 +15,7 @@ const login = (props) => {
     } else if (!(userr || loading)) {
       return;
     }
-  }, [userr, loading]);
+  }, [userr, loading, router]);
 
   return (
     <section className="relative w-full h-[100vh] flex justify-between overflow-hidden bg-white">
@@ -71,15 +71,11 @@ const login = (props) => {
             className="w-full h-full linear-p text-[130%] cursor-pointer text-white font-semibold sarabun tracking-wider rounded-[10px] px-4 py-[10px] outline-none"
             value="Login"
           />
-          <Link
-            href="/"
-            className="-mt-4 w-full text-right bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-[110%] font-bold text-transparent"
-          >
+          <button className="-mt-4 w-full text-right bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 text-[110%] font-bold text-transparent">
             Forgot Password?
-          </Link>
-          <Link
+          </button>
+          <button
             onClick={props.signIn}
-            href="/"
             className="flex gap-3 w-full px-4 py-3  items-center outfit bg-clip bg-gradient-to-r from-neutral-300 to-neutral-200 text-[110%] rounded-[14px] font-semibold text-[#333]/80"
           >
             <div className="relative w-[26px] h-[26px]">
@@ -91,7 +87,7 @@ const login = (props) => {
               />
             </div>
             Sign in with Google
-          </Link>
+          </button>
           <div className="flex gap-3 w-full px-4 py-3 cursor-not-allowed items-center outfit bg-clip bg-gradient-to-r from-blue-700 to-blue-500 text-[110%] rounded-[14px] font-semibold text-[#fff]/80">
             <div className="relative w-[14px] h-[26px]">
               <Image

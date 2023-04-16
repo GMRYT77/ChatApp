@@ -30,7 +30,15 @@ function MyApp({ Component, pageProps }) {
     firebase.auth().onAuthStateChanged(async (user) => {
       setUser(user);
     });
-    console.log(user);
+  }, [user]);
+
+  useEffect(() => {
+    const html = document.getElementById("html");
+    if (localStorage.getItem("DM") === "dark") {
+      html.classList.add("dark");
+    } else if (localStorage.getItem("DM") === "light") {
+      html.classList.remove("dark");
+    }
   }, []);
 
   return (
