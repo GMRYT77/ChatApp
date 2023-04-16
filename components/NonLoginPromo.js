@@ -3,7 +3,7 @@ import InputComp from "./InputComp";
 import Link from "next/link";
 import Seo from "./Seo";
 
-const NonLoginPromo = () => {
+const NonLoginPromo = (props) => {
   return (
     <section className="w-full relative h-[100vh]  flex justify-center items-center linear-p">
       <Seo
@@ -21,12 +21,12 @@ const NonLoginPromo = () => {
           >
             Login
           </Link>
-          <Link
-            href="/signup"
+          <button
+            onClick={props.si}
             className="py-3 w-[80%] bg-white backdrop-blur-2xl bg-opacity-20 rounded-lg drop-shadow  tracking-wider text-center"
           >
             Create Account
-          </Link>
+          </button>
           <p className="tracking-wider text-[80%] mt-2">
             <strong className="tracking-widest">Note:</strong> We Do Not
             Garentee Your Privacy.

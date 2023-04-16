@@ -70,7 +70,7 @@ export default function Home(props) {
           </section>
         </section>
       ) : (
-        <NonLoginPromo />
+        <NonLoginPromo si={props.signIn} />
       )}
     </Suspense>
   );
